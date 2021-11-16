@@ -611,7 +611,7 @@
         <!-- End Sidebar -->
 
 
-        <script src="Back/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="Back/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="Back/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="Back/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
     <script src="Back/assets/vendor/bootstrap/bootstrap.min.js"></script>

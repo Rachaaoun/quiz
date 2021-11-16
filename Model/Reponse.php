@@ -3,9 +3,9 @@ class Reponse
 {
   
     private $id;
-    private $verification;
-    private $temps;
-    private $note;
+    private $etudiant;
+    private $description;
+    private $classe;
     private $questionId;
 
     
@@ -18,33 +18,31 @@ class Reponse
         return $this->id;
     }
 
-    function getVerification(){
-        return $this->verification;
+    function getDescription(){
+        return $this->descritption;
     }
     
-    function getTemps(){
-        return $this->temps;
+    function getClasse(){
+        return $this->classe;
     }
 
-    function getNote(){
-        return $this->note;
+    function getEtudiant(){
+        return $this->etudiant;
     }
 
     function getQuestion(){
         return $this->note;
     }
 
-    function setVerification(string $verification){
-        $this->verification=$verification;
+    function setDescription(string $description){
+        $this->description=$description;
     }
 
-    function setTemps(string $temps){
-        $this->temps=$temps;
+    function setEtudiant(string $etudiant){
+        $this->etudiant=$etudiant;
     }
 
-    function setNote(string $note){
-        $this->note=$note;
-    }
+  
 
     function setQuestion(Question $questionId){
         $this->questionId=$questionId;

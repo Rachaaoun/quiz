@@ -15,9 +15,9 @@ include '../Controller/ReponseController.php';
               <table class="table table-hover tm-table-large tm-product-table">
                 <thead>
                   <tr>
-                    <th scope="col">Response Verification</th>
-                    <th scope="col" style="{position:center;}">Temps</th>
-                    <th scope="col">note</th>
+                    <th scope="col">Nom de l etudiant</th>
+                    <th scope="col" style="{position:center;}">Reponse</th>
+                    <th scope="col">classe</th>
                     <th scope="col">numero de question</th>
 					<th></th>
 					<th></th>
@@ -29,9 +29,9 @@ include '../Controller/ReponseController.php';
 				foreach($listeReponse as $response){
 			?>
                   <tr>
-                    <td class="tm-product-name"><?php echo $response['verification']; ?></td>
-                    <td><?php echo $response['temps']; ?></td>
-                    <td><?php echo $response['note']; ?></td>
+                    <td class="tm-product-name"><?php echo $response['etudiant']; ?></td>
+                    <td><?php echo $response['description']; ?></td>
+                    <td><?php echo $response['classe']; ?></td>
                     <td><?php echo $response['questionId']; ?></td>
                    
                     
