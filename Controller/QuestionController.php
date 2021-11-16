@@ -1,6 +1,6 @@
 <?php
-	include '../../config.php';
-	include_once '../../Model/Question.php';
+	include '../config.php';
+	include_once '../Model/Question.php';
 
 class QuestionController {
 
