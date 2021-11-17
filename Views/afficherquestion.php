@@ -43,12 +43,14 @@ include '../Controller/QuestionController.php';
 
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJtg7Y7swrRPMdzzZum1LOPqAKKbdv3lDNWw&usqp=CAU);">
+						<a href="afficherreponseparquestionF.php?id=<?php echo $question['id']; ?>" class="course-img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJtg7Y7swrRPMdzzZum1LOPqAKKbdv3lDNWw&usqp=CAU);">
 						</a>
 						<div class="desc">
-							<h3><a href="#"><?php echo $question['description']; ?></a></h3>
+							<h3><a href="afficherreponseparquestionF.php?id=<?php echo $question['id']; ?>"><?php echo $question['description']; ?></a></h3>
 							<p><?php echo $question['type']; ?></a> </p>
-							<span><a href="#" class="btn btn-primary btn-sm btn-course"><?php echo $question['course']; ?></a></a></span>
+							<p>Cours : <?php echo $question['course']; ?></p>
+							<span><a href="ajouterreponseF.php?id=<?php echo $question['id']; ?>" class="btn btn-primary btn-sm btn-course">Répondre </a></a></span>
+						
 						</div>
 					</div>
 				</div>

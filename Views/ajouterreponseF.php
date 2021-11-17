@@ -1,5 +1,5 @@
 <?php
-       include 'headerBack.php';
+       include 'headerFront.php';
        include '../Controller/ReponseController.php';
 	  $reponseC=new ReponseController();
   //  $categorieC=new ProduitController();
@@ -30,12 +30,10 @@
 				$_POST['etudiant'],
                 $_POST['description'], 
                 $_POST["classe"] ,
-                $_POST['questionId'] 
+                $_GET['id'] 
 			
             );
-           
-            $reponseC->modifierReponse($reponse,$_POST["id"]);
-           // header('Location:afficherreponse.php');
+            $reponseC->ajouterReponse($reponse);
            
         }
         else
@@ -61,25 +59,15 @@
 			<h2 class="tm-block-title d-inline-block">Add Response</h2>
 		  </div>
 		</div>
-        <?php
-			if (isset($_POST['id'])){
-			$reponse = $reponseC->recupererReponse($_POST['id']);
-				
-		?>
 		<div class="row tm-edit-product-row">
 		  <div class="col-xl-12 col-lg-12 col-lg-12">
 			<form action="" class="tm-edit-product-form" method="POST">
 			  <div class="form-group lg-12">
-              <label for="id" >
-                        </label>
-                   <input type="text" style="color :transparent ; background:transparent ; border:transparent"  name="id" id="id" class="form-control validate" value="<?php echo $reponse['id']; ?>" maxlength="20">
-                
-
 				<label
 				  for="name"
 				  >Etudiant
 				</label>
-				<input type="text" name="etudiant" id="etudiant" maxlength="20"  value="<?php echo $reponse['etudiant']; ?>"class="form-control validate">
+				<input type="text" name="etudiant" id="etudiant" maxlength="20"  class="form-control validate">
 
 			  </div>
 			  <div class="form-group mb-3">
@@ -88,7 +76,7 @@
 				  >La reponse
 				  </label>
 
-				<input type="text" name="description" value="<?php echo $reponse['description']; ?>" id="description" maxlength="50"  class="form-control validate"></textarea>
+				<textarea type="text" name="description" id="description" maxlength="20"  class="form-control validate"></textarea>
 
 			  </div>
 
@@ -98,31 +86,11 @@
 				  >Classe
 				  </label>
 
-				<input type="text" name="classe" id="classe" value="<?php echo $reponse['classe']; ?>"maxlength="20"  class="form-control validate"></textarea>
+				<textarea type="text" name="classe" id="classe" maxlength="20"  class="form-control validate"></textarea>
 
 			  </div>
 
-			  <div class="form-group lg-12">
-				<label
-				  for="question"
-				  >Question 
-				</label>
-			
-
-			<select name="questionId" id="" class="form-control validate">
-				   
-				 <?php   foreach($listeQuestion as $question){
-				?>
-
-					<option value="<?php echo $question['id']; ?>" name="questionId" id=""><?php echo $question['course']; ?></option>
-				   
-				   
-					<?php } ?>
-				
-			</select>
-
-
-			  </div>
+	
 		
 			
 			  
@@ -130,16 +98,24 @@
 		 
 		  <div class="col-12">
 			 
-			<input type="submit" href="afficherreponse.php"class="btn btn-primary btn-block text-uppercase" value="Update Response Now" ></input>
+			<input type="submit" href=""class="btn btn-primary btn-block text-uppercase" value="Add Response Now" ></input>
 	  
 		</div>
 		</form>
 		</div>
 	  </div>
-      <?php } ?>
 	</div>
   </div>
 </div>
 
 
 
+
+
+
+
+
+
+
+</body>
+</html>

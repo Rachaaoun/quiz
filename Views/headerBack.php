@@ -467,29 +467,29 @@
 
                         <!-- Questions -->
                         <li class="u-sidebar-nav-menu__item u-sidebar-nav--opened">
-                            <a class="u-sidebar-nav-menu__link" href="#!" data-target="#questions">
+                            <a class="u-sidebar-nav-menu__link" href="afficherquestion.php" data-target="#questions">
                                 <i class="fas fa-question u-sidebar-nav-menu__item-icon"></i>
-                                <span class="u-sidebar-nav-menu__item-title">Questions</span>
+                               <span class="u-sidebar-nav-menu__item-title">Questions</span>
                                 <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
                                 <span class="u-sidebar-nav-menu__indicator"></span>
                             </a>
 
                             <ul id="questions" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
                                 <li class="u-sidebar-nav-menu__item">
-                                    <a class="u-sidebar-nav-menu__link" href="questions-blank.html">
-                                        <span class="u-sidebar-nav-menu__item-title">Questions Blank</span>
+                                    <a class="u-sidebar-nav-menu__link" href="afficherquestionB.php">
+                                        <span class="u-sidebar-nav-menu__item-title">Questions</span>
                                     </a>
                                 </li>
+                            
+                            </ul>
+
+                            <ul id="questions" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
                                 <li class="u-sidebar-nav-menu__item">
-                                    <a class="u-sidebar-nav-menu__link" href="questions-bank.html">
-                                        <span class="u-sidebar-nav-menu__item-title">Questions Bank</span>
+                                    <a class="u-sidebar-nav-menu__link" href="afficherreponse.php">
+                                        <span class="u-sidebar-nav-menu__item-title">Reponses</span>
                                     </a>
                                 </li>
-                                <li class="u-sidebar-nav-menu__item">
-                                    <a class="u-sidebar-nav-menu__link active" href="questions-add.html">
-                                        <span class="u-sidebar-nav-menu__item-title">Add Questions</span>
-                                    </a>
-                                </li>
+                            
                             </ul>
                         </li>
                         <!-- End Questions -->

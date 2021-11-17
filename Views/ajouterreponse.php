@@ -76,7 +76,7 @@
 				  >La reponse
 				  </label>
 
-				<textarea type="text" name="description" id="description" maxlength="20"  class="form-control validate"></textarea>
+				<textarea type="text" name="description" id="description" maxlength="40"  class="form-control validate"></textarea>
 
 			  </div>
 

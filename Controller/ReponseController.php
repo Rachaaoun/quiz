@@ -62,13 +62,13 @@ class ReponseController {
 			$db = config::getConnexion();
 		
 
-			$sql="UPDATE reponse SET verification= :verification,temps= :temps,note= :note,questionId= :questionId WHERE id= :id";
+			$sql="UPDATE reponse SET etudiant= :etudiant,description= :description,classe= :classe,questionId= :questionId WHERE id= :id";
 			$db = config::getConnexion();
 			$req=$db->prepare($sql);
-			$req->bindValue(':verification', $reponse->getVerification());
+			$req->bindValue(':etudiant', $reponse->getEtudiant());
 			$req->bindValue(':id', $id);
-			$req->bindValue(':temps', $reponse->getTemps());
-			$req->bindValue(':note', $reponse->getNote());
+			$req->bindValue(':description', $reponse->getDescription());
+			$req->bindValue(':classe', $reponse->getClasse());
 			$req->bindValue(':questionId', $reponse->getQuestion());
 			$req->execute();
 		//	echo $query->rowCount() . " records UPDATED successfully <br>";
