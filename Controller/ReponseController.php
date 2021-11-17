@@ -18,6 +18,8 @@ class ReponseController {
 		}
 	}
 
+	
+
 	function afficherQuestions(){
 		$sql="SELECT * FROM question";
 		$db = config::getConnexion();
@@ -32,17 +34,17 @@ class ReponseController {
 
 	function ajouterReponse($reponse){
 
-		$sql="INSERT INTO reponse (verification, temps,note,questionId) 
-			VALUES (:verification,:temps,:note,:questionId)";
+		$sql="INSERT INTO reponse (etudiant, description,classe,questionId) 
+			VALUES (:etudiant,:description,:classe,:questionId)";
 			$db = config::getConnexion();
 			try{
 				
 				$query = $db->prepare($sql);
 				
 				$query->execute([
-					'verification' => $reponse->getVerification(),
-					'temps' => $reponse->getTemps(),
-					'note' => $reponse->getNote(),
+					'etudiant' => $reponse->getEtudiant(),
+					'description' => $reponse->getDescription(),
+					'classe' => $reponse->getClasse(),
 					'questionId' => $reponse->getQuestion(),
 				]);	
 				//header('Location: afficherquestion.php');

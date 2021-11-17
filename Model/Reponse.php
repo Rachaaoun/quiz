@@ -1,4 +1,6 @@
 <?php
+
+
 class Reponse
 {
   
@@ -10,8 +12,13 @@ class Reponse
 
     
        
-    function __construct( ){
-           
+    function __construct( $etudiant, $description,$classe,$questionId	){
+        $this->etudiant=$etudiant;
+        $this->description=$description;
+        $this->classe=$classe;
+        $this->questionId=$questionId;
+        //$this->file_path=$file_path	;
+      
     }
 
     function getId(){
@@ -19,7 +26,7 @@ class Reponse
     }
 
     function getDescription(){
-        return $this->descritption;
+        return $this->description;
     }
     
     function getClasse(){
@@ -31,7 +38,7 @@ class Reponse
     }
 
     function getQuestion(){
-        return $this->note;
+        return $this->questionId;
     }
 
     function setDescription(string $description){
