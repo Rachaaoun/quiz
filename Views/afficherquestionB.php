@@ -36,11 +36,11 @@ include '../Controller/QuestionController.php';
                    
                     
                     <td>
-					<form method="POST" action="modifierquestion.php?id=<?php echo $response['questionId']; ?>">
+					<form method="POST" action="modifierquestion.php?id=<?php echo $question['id']; ?>">
 						<input type="submit" name="Modifier" value="Modifier" class="btn btn-primary btn-block text-uppercase sm-1">
 						<input type="hidden" value=<?PHP echo $question['id']; ?> name="id">
 					</form>
-				</td>
+				     </td>
 
                 <td>
 				<a href="afficherreponseparquestion.php?id=<?php echo $question['id']; ?>"  class="tm-product-delete-link" >

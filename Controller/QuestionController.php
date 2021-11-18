@@ -66,9 +66,9 @@ class QuestionController {
 		
 	}
 
-	function supprimerReponse($id){
+	function supprimerQuestion($id){
 
-		$sql="DELETE FROM reponse WHERE id=:id";
+		$sql="DELETE FROM question WHERE id=:id";
 		$db = config::getConnexion();
 		$req=$db->prepare($sql);
 		$req->bindValue(':id', $id);
